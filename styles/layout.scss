@@ -1,0 +1,54 @@
+$font-color-red: #ff4d37;
+$background-color: #f7f7f7;
+
+.layout {
+  display: flex;
+}
+
+.content {
+  flex: 1;
+  min-width: 75%;
+  background-color: $background-color;
+  height: calc(100vh - 40px);
+  margin-top: 40px;
+}
+
+.right {
+  display: flex;
+  flex: 3;
+  flex-direction: column;
+  height: 100vh;
+  padding-left: 35px;
+  padding-right: 35px;
+}
+
+.socialmedia {
+  display: flex;
+  padding-top: 20px;
+  gap: 20px;
+  font-size: 16px;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  flex: 2;
+}
+
+li {
+  padding-top: 20px;
+  cursor: pointer;
+
+  &.active {
+    color: $font-color-red;
+  }
+}
+
+h2 {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  font-style: normal;
+}

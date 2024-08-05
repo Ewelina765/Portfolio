@@ -1,0 +1,75 @@
+$background-color: #f7f7f7;
+$font-size-title: 64px;
+$font-color-red: #ff4d37;
+$text-color: #222222;
+
+.left {
+  flex: 7;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding-right: 500px;
+  height: calc(100vh - 40px);
+}
+
+.left-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 500px;
+}
+
+h1 {
+  font-family: 'Unbounded', sans-serif;
+  font-size: $font-size-title;
+  font-weight: 400;
+  font-style: normal;
+  transform: translate(0%, 0%);
+  display: inline-block;
+  background-color: white;
+  padding-right: 20px;
+  line-height: 1.5;
+  max-height: 96px;
+  white-space: nowrap;
+}
+
+.h1 {
+  z-index: 10;
+}
+
+.p-red {
+  color: $font-color-red;
+}
+
+button {
+  color: $text-color;
+  width: 200px;
+  padding: 10px 20px;
+  border: 1px solid $text-color;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: $font-color-red;
+  }
+}
+
+.foto {
+  border-radius: 0 0 0 50px;
+  width: 100%;
+  height: auto;
+}
+
+.foto-container {
+  width: 100%;
+  max-width: 700px;
+  position: absolute;
+  left: 50%;
+}
+
+.text {
+  max-width: 300px;
+}

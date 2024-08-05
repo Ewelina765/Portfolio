@@ -1,0 +1,13 @@
+{
+    "singleQuote": true,
+    "trailingComma": "es5",
+    "overrides": [
+      {
+        "files": "*.scss",
+        "options": {
+          "parser": "scss"
+        }
+      }
+    ]
+  }
+  

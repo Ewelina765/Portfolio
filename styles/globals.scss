@@ -1,0 +1,20 @@
+$background-color: white;
+$text-color: #222222;
+$main-color: #ffffff;
+$font-size-body: 20px;
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Kanit', sans-serif;
+  font-weight: 400;
+  font-size: $font-size-body;
+  background-color: $background-color;
+  color: $text-color;
+}
