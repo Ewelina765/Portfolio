@@ -2,11 +2,7 @@
 
 ## Project Description
 
-Welcome to my portfolio! This project is part of my personal portfolio that showcases my skills and experience with [technologies you use, e.g., JavaScript, React, Node.js].
-
-### What You Will Find in This Repository
-
-In creating this portfolio, I have used React.js, TypeScript, Next.js, and SCSS.
+Welcome to my portfolio! This project is part of my personal portfolio that showcases my skills and experience with React.js, TypeScript, Next.js, and SCSS.
 
 ## Project Goal
 
@@ -55,11 +51,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ## Opis Projektu
 
-Witaj na moim portfolio! Ten projekt jest częścią mojego osobistego portfolio, które demonstruje moje umiejętności i doświadczenie w zakresie [technologie, które używasz, np. JavaScript, React, Node.js].
-
-### Co znajdziesz w tym repozytorium
-
-Tworząc Portfolio wykorzystuje React.js, TypeScript, Next.js, SCSS.
+Witaj na moim portfolio! Ten projekt jest częścią mojego osobistego portfolio, które demonstruje moje umiejętności i doświadczenie w zakresie React.js, TypeScript, Next.js, SCSS.
 
 ## Cel Projektu
 
