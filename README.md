@@ -1,3 +1,17 @@
+# My Portfolio
+
+## Project Description
+
+Welcome to my portfolio! This project is part of my personal portfolio that showcases my skills and experience with [technologies you use, e.g., JavaScript, React, Node.js].
+
+### What You Will Find in This Repository
+
+In creating this portfolio, I have used React.js, TypeScript, Next.js, and SCSS.
+
+## Project Goal
+
+The goal of this portfolio is to demonstrate my programming and design skills. You can view various projects I have worked on and learn about my achievements.
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
@@ -34,3 +48,19 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+#####
+
+# Moje Portfolio
+
+## Opis Projektu
+
+Witaj na moim portfolio! Ten projekt jest częścią mojego osobistego portfolio, które demonstruje moje umiejętności i doświadczenie w zakresie [technologie, które używasz, np. JavaScript, React, Node.js].
+
+### Co znajdziesz w tym repozytorium
+
+Tworząc Portfolio wykorzystuje React.js, TypeScript, Next.js, SCSS.
+
+## Cel Projektu
+
+Celem tego portfolio jest zaprezentowanie moich umiejętności programistycznych i projektowych. Możesz zobaczyć różne projekty, nad którymi pracowałem, oraz zapoznać się z moimi osiągnięciami.
