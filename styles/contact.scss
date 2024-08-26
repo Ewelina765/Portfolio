@@ -1,0 +1,35 @@
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  min-height: 100vh;
+}
+
+.contact-margin-left {
+  margin-left: 160px;
+}
+
+p.p-contact {
+  max-width: 700px;
+  font-size: 24px;
+  margin-left: 160px;
+}
+.foto-contact-container {
+  width: 103%;
+  position: relative;
+  height: 400px;
+}
+
+.divider {
+  height: 1px;
+  background-color: #626262;
+  opacity: 0.202;
+  margin: 0px 160px;
+}
+
+.info-details-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-left: 160px;
+}

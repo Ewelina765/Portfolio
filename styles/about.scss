@@ -1,0 +1,96 @@
+$font-color-pink: #eb34cc;
+
+.about {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.h2-about {
+  padding: 0px 160px;
+}
+
+.foto-about-container {
+  width: 103%;
+  position: relative;
+  height: 400px;
+}
+
+.foto-about {
+  object-fit: cover;
+  width: 100%;
+}
+
+.text-overlay {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 0 200px;
+  margin-top: -60px;
+}
+
+.sacramento {
+  font-family: 'Sacramento', cursive;
+  font-weight: 400;
+  font-style: normal;
+  color: $font-color-pink;
+  font-size: 100px;
+  transform: rotate(-25deg);
+  z-index: 2;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 0px 160px;
+}
+
+.p2-container {
+  display: flex;
+  gap: 40px;
+}
+
+.pandbox {
+  display: flex;
+  gap: 40px;
+}
+
+.pfromthebox {
+  flex: 1;
+  max-width: 51%;
+  min-width: 49%;
+}
+
+.info-box-container {
+  margin-top: -100px;
+  z-index: 10;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.info-box {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: white;
+  padding: 60px;
+}
+
+.info-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+h3 {
+  color: #222222;
+  font-weight: 500;
+  font-family: 'Unbounded';
+}
+
+h4 {
+  color: #626262;
+}

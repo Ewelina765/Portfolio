@@ -1,17 +1,14 @@
-$background-color: #f7f7f7;
-$font-size-title: 64px;
-$font-color-red: #ff4d37;
+$font-size-title: 76px;
+$font-color-green: #07b401;
 $text-color: #222222;
 
 .left {
-  flex: 7;
   display: flex;
+  flex: 7;
   flex-direction: row;
-  justify-content: center;
   align-items: center;
-  position: relative;
-  padding-right: 500px;
-  height: calc(100vh - 40px);
+  min-height: 100vh;
+  padding-left: 160px;
 }
 
 .left-container {
@@ -31,7 +28,7 @@ h1 {
   background-color: white;
   padding-right: 20px;
   line-height: 1.5;
-  max-height: 96px;
+  max-height: 114px;
   white-space: nowrap;
 }
 
@@ -40,7 +37,7 @@ h1 {
 }
 
 .p-red {
-  color: $font-color-red;
+  color: $font-color-green;
 }
 
 button {
@@ -53,23 +50,23 @@ button {
   transition: background-color 0.3s ease;
 
   &:hover {
-    background-color: $font-color-red;
+    background-color: $font-color-green;
   }
 }
 
 .foto {
-  border-radius: 0 0 0 50px;
+  border-radius: 0 0 0 100px;
   width: 100%;
-  height: auto;
+  min-height: 600px;
 }
 
 .foto-container {
   width: 100%;
-  max-width: 700px;
-  position: absolute;
-  left: 50%;
+  max-width: 750px;
+  position: relative;
+  margin-left: 120px;
 }
 
 .text {
-  max-width: 300px;
+  max-width: 400px;
 }

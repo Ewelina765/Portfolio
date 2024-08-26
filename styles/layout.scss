@@ -1,4 +1,4 @@
-$font-color-red: #ff4d37;
+$font-color-green: #07b401;
 $background-color: #f7f7f7;
 
 .layout {
@@ -9,8 +9,8 @@ $background-color: #f7f7f7;
   flex: 1;
   min-width: 75%;
   background-color: $background-color;
-  height: calc(100vh - 40px);
   margin-top: 40px;
+  height: 100%;
 }
 
 .right {
@@ -18,8 +18,10 @@ $background-color: #f7f7f7;
   flex: 3;
   flex-direction: column;
   height: 100vh;
-  padding-left: 35px;
+  padding-left: 70px;
   padding-right: 35px;
+  position: sticky;
+  top: 0;
 }
 
 .socialmedia {
@@ -42,13 +44,21 @@ li {
   cursor: pointer;
 
   &.active {
-    color: $font-color-red;
+    color: $font-color-green;
   }
 }
 
 h2 {
   font-family: 'Unbounded', sans-serif;
-  font-size: 24px;
+  font-size: 32px;
   font-weight: 400;
   font-style: normal;
+  font-weight: 400;
+}
+
+.logo-container {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  padding-bottom: 20px;
 }

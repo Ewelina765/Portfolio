@@ -9,12 +9,21 @@ body {
   width: 100%;
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: 'Kanit', sans-serif;
-  font-weight: 400;
+  font-weight: 300;
   font-size: $font-size-body;
   background-color: $background-color;
   color: $text-color;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  gap: 80px;
 }

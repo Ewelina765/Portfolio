@@ -1,9 +1,10 @@
 'use client';
 
-import { usePathname } from 'next/navigation';
+import { usePathname, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 
 import '../../styles/layout.scss';
+import Image from 'next/image';
 
 type LayoutProps = {
   children: React.ReactNode;
@@ -11,6 +12,8 @@ type LayoutProps = {
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   const path = usePathname();
+  // const searchParams = useSearchParams()
+  // const search = searchParams.get('skills')
 
   const socialMediaLinks = [
     { name: 'INS.', path: 'https://www.instagram.com' },
@@ -18,15 +21,15 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     { name: 'LIN.', path: 'https://www.linkedin.com/in//' },
   ];
   const navItems = [
-    { name: 'Home', path: '/home' },
-    { name: 'Skills', path: '/skills' },
-    { name: 'About', path: '/about' },
+    { name: 'Home', path: '/#home' },
+    { name: 'Skills', path: '/#skills' },
+    { name: 'About', path: '/#about' },
+    { name: 'Contact', path: '/#contact' },
     { name: 'Blog', path: '/blog' },
-    { name: 'Contact', path: '/contact' },
   ];
 
   return (
-    <div className="layout">
+    <div className="layout" id="home">
       <div className="content">{children}</div>
       <div className="right">
         <div className="socialmedia">
@@ -48,6 +51,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               </li>
             ))}
           </ul>
+        </div>
+        <div className="logo-container">
+          <Image src="/logo_white.png" alt="logo" width={200} height={0} />
         </div>
       </div>
     </div>

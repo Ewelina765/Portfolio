@@ -1,0 +1,64 @@
+$font-color-green: #07b401;
+$font-color-pink: #eb34cc;
+
+.contactForm {
+  padding: 40px 160px 120px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+form .name-email-form {
+  display: flex;
+  gap: 80px;
+}
+
+form .input-box {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+form textarea {
+  height: 200px;
+  padding: 10px 5px;
+  border-bottom: 2px solid #222222;
+  background-color: transparent;
+
+  &:focus {
+    outline: none;
+    border-bottom-color: $font-color-pink;
+  }
+}
+
+form label {
+  cursor: pointer;
+}
+
+form input {
+  background-color: transparent;
+  border-bottom: 2px solid #222222;
+  padding: 10px 5px;
+  transition: border-bottom-color 0.3s ease;
+
+  &:focus {
+    outline: none;
+    border-bottom-color: $font-color-pink;
+  }
+}
+
+form .required {
+  color: $font-color-pink;
+}
+
+form .button-contact {
+  align-self: flex-end;
+}
+
+.success-message {
+  color: $font-color-green;
+  font-weight: bold;
+}
