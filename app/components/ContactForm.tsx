@@ -8,33 +8,41 @@ import '../../styles/contactForm.scss';
 const ContactForm = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const formRef = useRef<HTMLFormElement | null>(null);
+  const formKey = process.env.NEXT_PUBLIC_KEY_FORM;
+  console.log(`Klucz API: ${formKey}`);
 
   const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
 
-    formData.append('access_key', '2dc6a4f3-db22-45eb-8631-6715c61a94be');
+    if (formKey) {
+      formData.append('access_key', formKey);
 
-    const object = Object.fromEntries(formData);
-    const json = JSON.stringify(object);
+      const object = Object.fromEntries(formData);
+      const json = JSON.stringify(object);
 
-    const res = await fetch('https://api.web3forms.com/submit', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        Accept: 'application/json',
-      },
-      body: json,
-    }).then((res) => res.json());
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: json,
+      }).then((res) => res.json());
 
-    if (res.success) {
-      setIsSubmitted(true);
-      formRef.current?.reset();
-      Swal.fire({
-        title: 'Good job!',
-        text: 'Message sent successfully!',
-        icon: 'success',
-      });
+      if (res.success) {
+        setIsSubmitted(true);
+        formRef.current?.reset();
+        Swal.fire({
+          title: 'Good job!',
+          text: 'Message sent successfully!',
+          icon: 'success',
+        });
+      }
+    } else {
+      console.error(
+        'Brak klucza dostępu (KEY_FORM) w zmiennych środowiskowych.'
+      );
     }
   };
 
