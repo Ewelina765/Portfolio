@@ -1,12 +1,12 @@
-'use client';
 
 import Image from 'next/image';
 
 import '../../../styles/home.scss';
+import Link from 'next/link';
 
 export default function Home() {
   return (
-    <div className="left">
+    <div className="left" id="home">
       <div className="left-container">
         <p>
           JUNIOR <span className="p-red">FULLSTACK</span> DEVELOPER
@@ -23,15 +23,18 @@ export default function Home() {
           teamwork and value each member's input to achieve shared goals and
           foster a positive work environment.
         </p>
-        <button>Explore my work</button>
+        <Link href="/#skills">
+          <button>Explore my work</button>
+        </Link>
       </div>
       <div className="foto-container">
         <Image
-          src="/ek4.svg"
-          alt="Picture of the author"
+          src="/images/ek4.svg"
+          alt="Ewelina Konieczkowska"
           width={600}
           height={750}
           className="foto"
+          priority={true}
         />
       </div>
     </div>

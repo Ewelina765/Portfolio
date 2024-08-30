@@ -1,0 +1,21 @@
+.blog {
+  height: 100vh;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 0px 160px;
+  margin-top: 40px;
+}
+
+h2 {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  font-style: normal;
+  font-weight: 400;
+}
+.blog-container {
+  display: flex;
+  flex-direction: column;
+}

@@ -43,9 +43,9 @@ li {
   padding-top: 20px;
   cursor: pointer;
 
-  &.active {
-    color: $font-color-green;
-  }
+  // &.active {
+  //   color: $font-color-green;
+  // }
 }
 
 h2 {
@@ -61,4 +61,7 @@ h2 {
   width: 100%;
   justify-content: flex-end;
   padding-bottom: 20px;
+}
+.active-scroll-spy {
+  color: $font-color-green;
 }

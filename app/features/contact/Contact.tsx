@@ -5,7 +5,7 @@ import ContactForm from '@/app/components/ContactForm';
 
 const Contact = () => {
   return (
-    <div className="contact" id="contact">
+    <section className="contact" id="contact">
       <h2 className="contact-margin-left">Contact</h2>
       <p className="p-contact">
         I believe that{' '}
@@ -20,7 +20,7 @@ const Contact = () => {
       </div>
       <div className="foto-contact-container">
         <Image
-          src="/contact5.svg"
+          src="/images/contact5.svg"
           alt="Picture nr 2 of the author"
           fill={true}
           className="foto-contact"
@@ -29,7 +29,7 @@ const Contact = () => {
         />
       </div>
       <ContactForm />
-    </div>
+    </section>
   );
 };
 

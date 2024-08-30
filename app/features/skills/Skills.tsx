@@ -3,7 +3,7 @@ import '../../../styles/skills.scss';
 
 const Skills = () => {
   return (
-    <div className="skills" id="skills">
+    <section className="skills" id="skills">
       <h2>Skills</h2>
       <p className="p">
         Driven by my passion for{' '}
@@ -46,7 +46,7 @@ const Skills = () => {
           <p>DEVSTOCK</p>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

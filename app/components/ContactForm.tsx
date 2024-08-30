@@ -9,7 +9,6 @@ const ContactForm = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const formRef = useRef<HTMLFormElement | null>(null);
   const formKey = process.env.NEXT_PUBLIC_KEY_FORM;
-  console.log(`Klucz API: ${formKey}`);
 
   const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();

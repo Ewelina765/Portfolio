@@ -1,0 +1,36 @@
+$font-color-green: #07b401;
+
+.post {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 0px 160px;
+  margin-top: 40px;
+  gap: 40px;
+}
+
+.post-title {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.post-date {
+  color: $font-color-green;
+}
+
+.post-content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.post-content h4 {
+  margin-top: 20px; /* Odstęp nad tytułem */
+  margin-bottom: 20px; /* Odstęp pod tytułem */
+  font-size: 24px;
+  font-weight: 400;
+}
+.back-home-text {
+    text-decoration: underline;
+}
