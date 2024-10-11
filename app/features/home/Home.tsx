@@ -15,14 +15,14 @@ export default function Home() {
           </p>
           <div className="home__title">
             <h1>
-              Hello I<span className="p-green">'</span>m{' '}
+              Hello I<span className="p-green">&apos;</span>m{' '}
               <span className="p-green">Ewelina</span>
             </h1>
             <h1>Konieczkowska</h1>
           </div>
           <p className="details__content">
             With a strong work ethic and open-minded approach, I prioritize
-            teamwork and value each member's input to achieve shared goals and
+            teamwork and value each member&apos;s input to achieve shared goals and
             foster a positive work environment.
           </p>
           <div className="home__button-container">

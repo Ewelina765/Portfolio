@@ -21,12 +21,12 @@ const About = () => {
         <div className="paragraph__and-box">
           <p className="paragraph__near-box">
             I graduated with a degree in pharmacy but quickly realized that this
-            career path wasn't for me. Seeking new opportunities, I enrolled in
+            career path wasn&apos;t for me. Seeking new opportunities, I enrolled in
             a frontend development course and found creating websites to be
             incredibly enjoyable. The course sparked my interest, and I began
             designing websites for my friends and family. This is how my passion
             for web development began. As I explored frontend development, I
-            became curious about what happens "under the hood," which led me to
+            became curious about what happens &quot;under the hood&quot;, which led me to
             learn about backend development as well.
           </p>
           <div className="info-box">
@@ -69,19 +69,19 @@ const About = () => {
           </p>
           <p>
             Lately, I have developed a keen interest in artificial intelligence
-            and no-code tools like Bubble.io and Make.com. It's exciting to
+            and no-code tools like Bubble.io and Make.com. It&apos;s exciting to
             explore how programming can be combined with AI to create innovative
             solutions. I see tremendous potential in these technologies, as they
             empower developers to build sophisticated applications more
             efficiently. The synergy between coding and AI opens up new
-            possibilities, and I'm enthusiastic about where this path will lead.
+            possibilities, and I&apos;m enthusiastic about where this path will lead.
           </p>
         </div>
         <p>
           Looking ahead, I aspire to work in an inclusive where I can
           continuously grow and contribute. Building strong relationships with
           colleagues is incredibly important to me, as I believe that supporting
-          one another fuels the entire team's success. I am passionate about
+          one another fuels the entire team&apos;s success. I am passionate about
           fostering a collaborative atmosphere where everyone feels valued and
           inspired to achieve their best. My goal is to be part of a team that
           shares this vision and works together to create innovative and
