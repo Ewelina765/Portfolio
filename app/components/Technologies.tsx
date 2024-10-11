@@ -12,9 +12,11 @@ import {
   SiStyledcomponents,
   SiTailwindcss,
   SiTypescript,
+  SiJira
 } from 'react-icons/si';
 import { TbBrandNextjs, TbChartBubble, TbApi } from 'react-icons/tb';
 import { DiScrum } from 'react-icons/di';
+
 
 import '../../styles/skills.scss';
 
@@ -35,6 +37,8 @@ const Technologies = () => {
     { name: 'Node.js ', icon: <FaNodeJs /> },
     { name: 'Rest API', icon: <TbApi /> },
     { name: 'Sass', icon: <FaSass /> },
+    { name: 'Jira', icon: <SiJira />
+  },
   ];
 
   return (
