@@ -1,12 +1,12 @@
 import type { Metadata } from 'next';
 
+import Layout from './components/Layout';
 import './globals.css';
 import '../styles/globals.scss';
-import Layout from './components/Layout';
 
 export const metadata: Metadata = {
   title: "Ewelina's Portfolio",
-  description: "Ewelina Konieczkowska Portfolio",
+  description: 'Ewelina Konieczkowska Portfolio',
 };
 
 export default function RootLayout({

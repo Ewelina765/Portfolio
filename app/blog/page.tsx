@@ -1,22 +1,21 @@
 import { getSortedPostsData } from '@/lib/posts';
+import Pagination from '../components/Pagination';
 import '../../styles/blog.scss';
-import ListItem from '../components/ListItem';
+import '../../styles/globals.scss';
 
 const ListOfPostsPage = () => {
   const posts = getSortedPostsData();
-  //   console.log('posts', posts);
 
   return (
-    <section className="blog" id="blog">
-      <h2>Blog</h2>
-      <div className="blog-container">
-        <ul>
-          {posts.map((post) => (
-            <ListItem key={post.id} post={post} />
-          ))}
-        </ul>
-      </div>
-    </section>
+    <div className="blog" id="blog">
+      <div className="white-bar"></div>
+      <section className="blog__container">
+        <h2>Blog</h2>
+        <div className="pagination-box">
+          <Pagination posts={posts} />
+        </div>
+      </section>
+    </div>
   );
 };
 

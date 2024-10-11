@@ -48,29 +48,27 @@ const ContactForm = () => {
   return (
     <div className="contactForm">
       <form onSubmit={onSubmit} ref={formRef}>
-        <div className="name-email-form">
-          <div className="input-box">
+        <div className="contactForm__first-container">
+          <div className="contactForm__input-container">
             <label htmlFor="name">
-              Your Name <span className="required">*</span>
+              Your Name <span className="required-star">*</span>
             </label>
             <input type="text" id="name" name="name" required />
           </div>
-          <div className="input-box">
+          <div className="contactForm__input-container">
             <label htmlFor="email">
-              Your Email <span className="required">*</span>
+              Your Email <span className="required-star">*</span>
             </label>
             <input type="email" id="email" name="email" required />
           </div>
         </div>
-        <div className="message-form">
-          <div className="input-box">
-            <label htmlFor="message">
-              Message <span className="required">*</span>
-            </label>
-            <textarea required id="message" name="message" />
-          </div>
+        <div className="contactForm__input-container">
+          <label htmlFor="message">
+            Message <span className="required-star">*</span>
+          </label>
+          <textarea required id="message" name="message" />
         </div>
-        <button className="button-contact" type="submit">
+        <button className="contactForm__button" type="submit">
           Send Message
         </button>
       </form>

@@ -1,64 +1,84 @@
-$font-color-green: #07b401;
-$font-color-pink: #eb34cc;
+@use 'globals';
+@import 'mixins';
 
 .contactForm {
-  padding: 40px 160px 120px;
+  padding: 10px 20px 60px;
+  @media screen and (min-width: globals.$breakpoint-medium) {
+    padding: 0px 40px 80px;
+  }
+  @media screen and (min-width: globals.$breakpoint-large) {
+    padding: 0px 80px 100px;
+  }
+  @media screen and (min-width: globals.$breakpoint-extra-large) {
+    padding: 40px 160px 120px;
+  }
+
+  &__first-container {
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
+    @media screen and (min-width: globals.$breakpoint-medium) {
+      gap: 40px;
+      flex-direction: row;
+    }
+    @media screen and (min-width: globals.$breakpoint-large) {
+      gap: 80px;
+    }
+  }
+
+  &__input-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  &__button {
+    align-self: flex-end;
+    @include button-styles;
+    width: 200px;
+    padding: 10px 20px;
+  }
 }
 
 form {
   display: flex;
   flex-direction: column;
   gap: 60px;
-}
 
-form .name-email-form {
-  display: flex;
-  gap: 80px;
-}
+  textarea {
+    height: 200px;
+    padding: 10px 5px;
+    border-bottom: 1px solid #222222;
+    background-color: transparent;
 
-form .input-box {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
+    &:focus {
+      outline: none;
+      border-bottom-color: globals.$font-color-pink;
+    }
+  }
 
-form textarea {
-  height: 200px;
-  padding: 10px 5px;
-  border-bottom: 2px solid #222222;
-  background-color: transparent;
+  label {
+    cursor: pointer;
+  }
 
-  &:focus {
-    outline: none;
-    border-bottom-color: $font-color-pink;
+  input {
+    background-color: transparent;
+    border-bottom: 1px solid #222222;
+    padding: 10px 5px;
+    transition: border-bottom-color 0.3s ease;
+
+    &:focus {
+      outline: none;
+      border-bottom-color: globals.$font-color-pink;
+    }
   }
 }
 
-form label {
-  cursor: pointer;
-}
-
-form input {
-  background-color: transparent;
-  border-bottom: 2px solid #222222;
-  padding: 10px 5px;
-  transition: border-bottom-color 0.3s ease;
-
-  &:focus {
-    outline: none;
-    border-bottom-color: $font-color-pink;
-  }
-}
-
-form .required {
-  color: $font-color-pink;
-}
-
-form .button-contact {
-  align-self: flex-end;
+.required-star {
+  color: globals.$font-color-pink;
 }
 
 .success-message {
-  color: $font-color-green;
+  color: globals.$font-color-green;
   font-weight: bold;
 }

@@ -20,31 +20,28 @@ import '../../styles/skills.scss';
 
 const Technologies = () => {
   const techList = [
-    { name: 'React', icon: <FaReact size={50} /> },
-    {
-      name: 'JavaScript',
-      icon: <FaJsSquare size={50} className="js" />,
-    },
-    { name: 'CSS', icon: <FaCss3Alt size={50} /> },
-    { name: 'HTML', icon: <FaHtml5 size={50} /> },
-    { name: 'GIT', icon: <FaGitAlt size={50} /> },
-    { name: 'Styled Components', icon: <SiStyledcomponents size={50} /> },
-    { name: 'Tailwind', icon: <SiTailwindcss size={50} /> },
-    { name: 'NextJS', icon: <TbBrandNextjs size={50} /> },
-    { name: 'Typescript', icon: <SiTypescript size={50} /> },
-    { name: 'Figma', icon: <FaFigma size={50} /> },
-    { name: 'Scrum', icon: <DiScrum size={50} /> },
-    { name: 'Bubble.io', icon: <TbChartBubble size={50} /> },
-    { name: 'Node.js ', icon: <FaNodeJs size={50} /> },
-    { name: 'Rest API', icon: <TbApi size={50} /> },
-    { name: 'Sass', icon: <FaSass size={50} /> },
+    { name: 'React', icon: <FaReact /> },
+    { name: 'JavaScript', icon: <FaJsSquare /> },
+    { name: 'CSS', icon: <FaCss3Alt /> },
+    { name: 'HTML', icon: <FaHtml5 /> },
+    { name: 'GIT', icon: <FaGitAlt /> },
+    { name: 'Styled Comp.', icon: <SiStyledcomponents /> },
+    { name: 'Tailwind', icon: <SiTailwindcss /> },
+    { name: 'NextJS', icon: <TbBrandNextjs /> },
+    { name: 'Typescript', icon: <SiTypescript /> },
+    { name: 'Figma', icon: <FaFigma /> },
+    { name: 'Scrum', icon: <DiScrum /> },
+    { name: 'Bubble.io', icon: <TbChartBubble /> },
+    { name: 'Node.js ', icon: <FaNodeJs /> },
+    { name: 'Rest API', icon: <TbApi /> },
+    { name: 'Sass', icon: <FaSass /> },
   ];
 
   return (
-    <ul className="technologies-container">
+    <ul className="technologies">
       {techList.map(({ name, icon }) => (
-        <li key={name}>
-          {icon}
+        <li key={name} className="technologies__element">
+          <div className="technologies__icon">{icon}</div>
           <span>{name}</span>
         </li>
       ))}

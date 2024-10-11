@@ -1,12 +1,12 @@
 'use client';
 
+import { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 
 import '../../styles/layout.scss';
-import Image from 'next/image';
 import useScrollSpy from '../hooks/useScrollSpy';
-import { useEffect, useState } from 'react';
 
 type LayoutProps = {
   children: React.ReactNode;
@@ -14,22 +14,50 @@ type LayoutProps = {
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   const path = usePathname();
-  const sectionIds = ['home', 'skills', 'about', 'contact', 'blog']; // Identyfikatory sekcji do obserwacji
-  const activeSectionId = useScrollSpy(sectionIds, { threshold: 0.5 }); // Użyj hooka useScrollSpy
-  const [activeLink, setActiveLink] = useState<string>(''); // Dodaj stan dla aktywnego linku
+  const sectionIds = ['home', 'skills', 'about', 'contact', 'blog'];
+  const activeSectionId = useScrollSpy(sectionIds, { threshold: 0.35 }); 
+  const [activeLink, setActiveLink] = useState<string>(''); 
+  const [navigationOpen, setNaviagtionOpen] = useState<boolean>(false);
+  const [isMobile, setIsMobile] = useState<boolean>(false);
+
+  const handleResize = () => {
+    setIsMobile(window.innerWidth <= 768);
+  };
+
+  useEffect(() => {
+    handleResize();
+    window.addEventListener('resize', handleResize); 
+
+    return () => {
+      window.removeEventListener('resize', handleResize); 
+    };
+  }, []);
 
   useEffect(() => {
     if (path === '/blog') {
       setActiveLink('blog');
     } else {
-      setActiveLink(activeSectionId); 
+      setActiveLink(activeSectionId);
     }
   }, [path, activeSectionId]);
 
   const socialMediaLinks = [
-    { name: 'INS.', path: 'https://www.instagram.com' },
-    { name: 'YT.', path: 'https://www.youtube.com/' },
-    { name: 'LIN.', path: 'https://www.linkedin.com/in//' },
+    {
+      name: 'LI.',
+      path: 'https://www.linkedin.com/in/ewelinakonieczkowska/',
+    },
+    {
+      name: 'GH.',
+      path: 'https://github.com/Ewelina765',
+    },
+    {
+      name: 'YT.',
+      path: 'https://www.youtube.com/@DevJourney1',
+    },
+    {
+      name: 'IG.',
+      path: 'https://www.instagram.com/_devjourney_?igsh=bjh4ZzU5OXF1Njl6&utm_source=qr',
+    },
   ];
   const navItems = [
     { name: 'Home', path: '/#home', id: 'home' },
@@ -39,58 +67,62 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     { name: 'Blog', path: '/blog', id: 'blog' },
   ];
 
+  const closeMenu = () => {
+    setNaviagtionOpen(false);
+  };
+
   return (
     <section className="layout">
       <div className="content">{children}</div>
-      <div className="right">
-        <div className="socialmedia">
-          {socialMediaLinks.map(({ name, path }) => (
-            <Link key={name} href={path}>
-              {name}
-            </Link>
-          ))}
-        </div>
-        <div className="details">
-          <h2>EWELINA</h2>
-          <nav>
-            <ul>
-              {navItems.map((item) => (
-                <li
-                  key={item.name}
-                  className={activeLink === item.id ? 'active-scroll-spy' : ''}
-                >
-                  <Link href={item.path}>{item.name}</Link>
-                </li>
+      <div className="layout__container">
+        {(isMobile && navigationOpen) || !isMobile ? (
+          <div className="layout__navigation">
+            <div className="socialmedia">
+              {socialMediaLinks.map(({ name, path }) => (
+                <Link key={path} href={path} className="link-class">
+                  {name}
+                </Link>
               ))}
+            </div>
+            <div className="details">
+              <h2 className="details__title">EWELINA KONIECZKOWSKA</h2>
+              <nav>
+                <ul>
+                  {navItems.map((item) => (
+                    <li
+                      key={item.name}
+                      className={
+                        activeLink === item.id ? 'active-scroll-spy' : ''
+                      }
+                      onClick={closeMenu}
+                    >
+                      <Link href={item.path} className="link-class">
+                        {item.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+            </div>
+          </div>
+        ) : null}
 
-              {/* {navItems.map((item) =>
-                item.id !== 'blog' ? (
-                  <li
-                    key={item.name}
-                    className={activeId === item.id ? 'active-scroll-spy' : ''}
-                    onClick={() => scrollToSection(item.id)}
-                  >
-                    {path === '/blog' ? ( // Sprawdzenie, czy jesteś na stronie 'blog'
-                      <Link href="/">{item.name}</Link>
-                    ) : (
-                      item.name 
-                    )}
-                  </li>
-                ) : (
-                  <li
-                    key={item.name}
-                    className={activeId === item.id ? 'active-scroll-spy' : ''} // Klasa CSS dla aktywnej sekcji
-                  >
-                    <Link href={item.path}>{item.name}</Link>
-                  </li>
-                )
-              )} */}
-            </ul>
-          </nav>
-        </div>
-        <div className="logo-container">
-          <Image src="/images/logo_white.png" alt="logo" width={200} height={0} />
-        </div>
+        <button
+          className="logo__container"
+          onClick={() => {
+            if (isMobile) {
+              setNaviagtionOpen(!navigationOpen);
+            }
+          }}
+        >
+          <Image
+            src="/images/logo_white.png"
+            alt="logo"
+            width={200}
+            height={0}
+            style={{ height: 'auto' }}
+          />
+        </button>
       </div>
     </section>
   );

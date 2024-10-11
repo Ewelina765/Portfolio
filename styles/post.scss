@@ -1,36 +1,71 @@
-$font-color-green: #07b401;
+@use "globals";
 
 .post {
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  padding: 0px 160px;
+  min-height: 100vh;
+  padding: 0px 40px 60px;
   margin-top: 40px;
   gap: 40px;
-}
+  @media screen and (min-width: globals.$breakpoint-medium) {
+    padding: 0px 40px;
+  }
+  @media screen and (min-width: globals.$breakpoint-large) {
+    padding: 0px 80px;
+  }
+  @media screen and (min-width: globals.$breakpoint-extra-large) {
+    padding: 0px 160px;
+  }
 
-.post-title {
-  font-family: 'Unbounded', sans-serif;
-  font-size: 36px;
-  font-weight: 400;
-  font-style: normal;
-}
+  &__title {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 36px;
+    font-weight: 400;
+    font-style: normal;
+  }
 
-.post-date {
-  color: $font-color-green;
+  &__date {
+    color: globals.$font-color-green;
+  }
 }
 
 .post-content {
   display: flex;
   flex-direction: column;
   gap: 40px;
+  padding-bottom: 40px;
+
+  h4 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 400;
+  }
+
+  ul {
+    list-style-type: disc;
+  }
+
+  ol {
+    list-style-type: decimal;
+  }
+
+  ul,
+  ol {
+    margin-left: 20px;
+    padding-left: 20px;
+  }
+
+  img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
-.post-content h4 {
-  margin-top: 20px; /* Odstęp nad tytułem */
-  margin-bottom: 20px; /* Odstęp pod tytułem */
-  font-size: 24px;
-  font-weight: 400;
-}
+
 .back-home-text {
-    text-decoration: underline;
+  text-decoration: underline;
 }

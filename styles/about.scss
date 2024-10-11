@@ -1,96 +1,161 @@
-$font-color-pink: #eb34cc;
+@use 'globals';
+@import 'mixins';
+$breakpoint-additional: 1400px;
 
 .about {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 20px;
+  @media screen and (min-width: globals.$breakpoint-medium) {
+    gap: 40px;
+  }
+
+  &__title {
+    padding: 0px 20px;
+    @media screen and (min-width: globals.$breakpoint-medium) {
+      padding: 0px 40px;
+    }
+    @media screen and (min-width: globals.$breakpoint-large) {
+      padding: 0px 80px;
+    }
+    @media screen and (min-width: globals.$breakpoint-extra-large) {
+      padding: 0px 160px;
+    }
+  }
+
+  &__foto-container {
+    position: relative;
+    height: 150px;
+    z-index: 10;
+    @media screen and (min-width: globals.$breakpoint-medium) {
+      height: 300px;
+      width: 102%;
+    }
+    @media screen and (min-width: globals.$breakpoint-large) {
+      height: 400px;
+    }
+  }
+
+  &__foto {
+    object-fit: cover;
+    width: 100%;
+  }
+
+  &__text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0px 20px;
+    @media screen and (min-width: globals.$breakpoint-medium) {
+      padding: 0px 40px;
+      gap: 40px;
+    }
+    @media screen and (min-width: globals.$breakpoint-large) {
+      padding: 0px 80px;
+    }
+    @media screen and (min-width: globals.$breakpoint-extra-large) {
+      padding: 0px 160px;
+    }
+  }
 }
 
-.h2-about {
-  padding: 0px 160px;
-}
-
-.foto-about-container {
-  width: 103%;
-  position: relative;
-  height: 400px;
-}
-
-.foto-about {
-  object-fit: cover;
-  width: 100%;
-}
-
-.text-overlay {
+.name-sacramento-container {
   display: flex;
   justify-content: flex-end;
-  width: 100%;
-  padding: 0 200px;
   margin-top: -60px;
+  padding: 0 50px;
+  @media screen and (min-width: globals.$breakpoint-medium) {
+    width: 100%;
+    padding: 0 100px;
+  }
+  @media screen and (min-width: globals.$breakpoint-extra-large) {
+    padding: 0 200px;
+  }
 }
 
-.sacramento {
+.name-sacramento {
   font-family: 'Sacramento', cursive;
   font-weight: 400;
   font-style: normal;
-  color: $font-color-pink;
-  font-size: 100px;
+  color: globals.$font-color-pink;
+  font-size: 60px;
   transform: rotate(-25deg);
-  z-index: 2;
+  @media screen and (min-width: globals.$breakpoint-medium) {
+    font-size: 100px;
+  }
 }
 
-.text-container {
+.paragraph__and-box {
   display: flex;
-  flex-direction: column;
-  gap: 40px;
-  padding: 0px 160px;
+  flex-direction: column-reverse;
+  gap: 20px;
+  @media screen and (min-width: $breakpoint-additional) {
+    flex-direction: row;
+    gap: 40px;
+  }
 }
 
-.p2-container {
-  display: flex;
-  gap: 40px;
-}
-
-.pandbox {
-  display: flex;
-  gap: 40px;
-}
-
-.pfromthebox {
-  flex: 1;
-  max-width: 51%;
-  min-width: 49%;
-}
-
-.info-box-container {
-  margin-top: -100px;
-  z-index: 10;
-  display: flex;
-  width: 100%;
-  justify-content: center;
+.paragraph__near-box {
+  @media screen and (min-width: $breakpoint-additional) {
+    flex: 1;
+    max-width: 51%;
+    min-width: 49%;
+  }
 }
 
 .info-box {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+  border: 1px solid #626262;
+  border-radius: 10px;
+  padding: 20px;
   background-color: white;
-  padding: 60px;
+  @media screen and (min-width: $breakpoint-additional) {
+    margin-top: -100px;
+    z-index: 10;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    border: none;
+    padding: 0;
+    min-width: 80px;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    @media screen and (min-width: globals.$breakpoint-medium) {
+      padding: 20px;
+      border-radius: 0 0 0 100px;
+    }
+    @media screen and (min-width: globals.$breakpoint-large) {
+      padding: 60px;
+    }
+  }
+
+  &__button {
+    border-radius: 10px;
+    padding: 0 5px;
+    color: globals.$text-color;
+    min-width: 255px;
+    @include button-styles;
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
 }
 
-.info-details {
+.paragraphs-container {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
+  gap: 40px;
 }
 
 h3 {
   color: #222222;
   font-weight: 500;
   font-family: 'Unbounded';
-}
-
-h4 {
-  color: #626262;
 }

@@ -22,6 +22,7 @@ export function getSortedPostsData() {
       title: matterResult.data.title,
       date: matterResult.data.date,
       category: matterResult.data.category,
+      image: matterResult.data.image,
     };
     return blogPost;
   });
@@ -38,11 +39,13 @@ export async function getPostData(id: string) {
     .process(matterResult.content);
 
   const contentHtml = processedContent.toString();
+  
   const blogPostWithHtml: BlogPost & { contentHtml: string } = {
     id,
     title: matterResult.data.title,
     date: matterResult.data.date,
     category: matterResult.data.category,
+    image: matterResult.data.image,
     contentHtml,
   };
   return blogPostWithHtml;

@@ -1,0 +1,20 @@
+@use 'globals';
+
+@mixin button-styles {
+  color: globals.$text-color;
+  border: 1px solid globals.$text-color;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.5s ease-in-out;
+  transition: transform 0.3s ease-out;
+  &:hover {
+    background-color: globals.$font-color-green;
+    transform: scale(1.1);
+  }
+}
+
+@mixin divider {
+  height: 1px;
+  background-color: #626262;
+  opacity: 0.202;
+}

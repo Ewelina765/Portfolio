@@ -1,34 +1,74 @@
-$font-color-green: #07b401;
-$background-color: #f7f7f7;
+@use 'globals';
 
 .layout {
   display: flex;
+  flex-direction: column-reverse;
+  width: 100%;
+  @media screen and (min-width: globals.$breakpoint-medium) {
+    flex-direction: row;
+  }
+
+  &__container {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    min-height: 50px;
+    background-color: white;
+    border-bottom: 1px solid #07b401;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 10px;
+    @media screen and (min-width: globals.$breakpoint-medium) {
+      border-bottom: none;
+      flex: 1;
+      z-index: 0;
+      width: 100%;
+      flex-direction: column;
+      height: 100vh;
+      justify-content: center;
+    }
+  }
+
+  &__navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    margin-left: 60px;
+    padding-bottom: 20px;
+    gap: 20px;
+    width: 100%;
+    @media screen and (min-width: globals.$breakpoint-medium) {
+      width: auto;
+      height: 100%;
+      margin-left: 20px;
+      margin-right: 0px;
+      margin-top: 0px;
+      align-items: flex-start;
+    }
+    @media screen and (min-width: globals.$breakpoint-extra-large) {
+      margin-left: 40px;
+      margin-right: 20px;
+    }
+  }
 }
 
 .content {
-  flex: 1;
-  min-width: 75%;
-  background-color: $background-color;
-  margin-top: 40px;
-  height: 100%;
-}
-
-.right {
-  display: flex;
-  flex: 3;
-  flex-direction: column;
-  height: 100vh;
-  padding-left: 70px;
-  padding-right: 35px;
-  position: sticky;
-  top: 0;
+  background-color: globals.$background-color;
+  @media screen and (min-width: globals.$breakpoint-medium) {
+    height: 100%;
+    padding-top: 0;
+    flex: 4;
+  }
 }
 
 .socialmedia {
   display: flex;
-  padding-top: 20px;
   gap: 20px;
   font-size: 16px;
+  @media screen and (min-width: globals.$breakpoint-medium) {
+    padding-top: 20px;
+  }
 }
 
 .details {
@@ -37,31 +77,46 @@ $background-color: #f7f7f7;
   gap: 20px;
   justify-content: center;
   flex: 2;
+
+  &__title {
+    display: none;
+    @media screen and (min-width: 1300px) {
+      display: flex;
+      font-size: 24px;
+    }
+    @media screen and (min-width: globals.$breakpoint-extra-extra-large) {
+      font-size: 34px;
+    }
+  }
 }
 
 li {
   padding-top: 20px;
-  cursor: pointer;
-
-  // &.active {
-  //   color: $font-color-green;
-  // }
 }
 
-h2 {
-  font-family: 'Unbounded', sans-serif;
-  font-size: 32px;
-  font-weight: 400;
-  font-style: normal;
-  font-weight: 400;
-}
-
-.logo-container {
+.logo__container {
   display: flex;
-  width: 100%;
-  justify-content: flex-end;
-  padding-bottom: 20px;
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
+  @media screen and (min-width: globals.$breakpoint-medium) {
+    width: 100%;
+    height: auto;
+    justify-content: flex-end;
+    padding-bottom: 20px;
+  }
 }
+
 .active-scroll-spy {
-  color: $font-color-green;
+  color: globals.$font-color-green;
+}
+
+.link-class {
+  cursor: pointer;
+  transition: transform 0.3s ease-out;
+  display: inline-block;
+  &:hover {
+    color: globals.$font-color-pink;
+    transform: scale(1.3);
+  }
 }

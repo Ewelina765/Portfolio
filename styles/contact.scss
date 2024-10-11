@@ -1,36 +1,78 @@
+@use "globals";
+@import 'mixins';
+
 .contact {
   display: flex;
   flex-direction: column;
   gap: 40px;
   min-height: 100vh;
-  // height: 100vh;
+
+  &__title {
+    padding: 0 20px;
+    @media screen and (min-width: globals.$breakpoint-medium) {
+      padding: 0px 40px;
+    }
+    @media screen and (min-width: globals.$breakpoint-large) {
+      padding: 0px 80px;
+    }
+    @media screen and (min-width: globals.$breakpoint-extra-large) {
+      padding: 0px 160px;
+    }
+  }
+
+  &__description {
+    font-size: 20px;
+    padding: 0 20px;
+    @media screen and (min-width: globals.$breakpoint-medium) {
+      padding: 0px 40px;
+      font-size: 24px;
+    }
+    @media screen and (min-width: globals.$breakpoint-large) {
+      padding: 0px 80px;
+    }
+    @media screen and (min-width: globals.$breakpoint-extra-large) {
+      padding: 0px 160px;
+    }
+  }
+
+  &__foto-container {
+    position: relative;
+    height: 100px;
+    z-index: 10;
+    @media screen and (min-width: globals.$breakpoint-medium) {
+      width: 102%;
+      height: 180px;
+    }
+    @media screen and (min-width: globals.$breakpoint-extra-large) {
+      width: 102%;
+      height: 300px;
+    }
+  }
+
+  &__info-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 20px;
+    @media screen and (min-width: globals.$breakpoint-medium) {
+      padding: 0px 40px;
+    }
+    @media screen and (min-width: globals.$breakpoint-large) {
+      padding: 0px 80px;
+    }
+    @media screen and (min-width: globals.$breakpoint-extra-large) {
+      padding: 0px 160px;
+    }
+  }
 }
 
-.contact-margin-left {
-  margin-left: 160px;
-}
-
-p.p-contact {
-  max-width: 700px;
-  font-size: 24px;
-  margin-left: 160px;
-}
-.foto-contact-container {
-  width: 103%;
-  position: relative;
-  height: 400px;
-}
-
-.divider {
-  height: 1px;
-  background-color: #626262;
-  opacity: 0.202;
-  margin: 0px 160px;
-}
-
-.info-details-contact {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-left: 160px;
+.divider-contact {
+  @include divider;
+  margin: 0 20px;
+  @media screen and (min-width: globals.$breakpoint-medium) {
+    margin: 0px 80px;
+  }
+  @media screen and (min-width: globals.$breakpoint-extra-large) {
+    margin: 0px 160px;
+  }
 }
