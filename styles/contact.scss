@@ -44,8 +44,10 @@
       height: 180px;
     }
     @media screen and (min-width: globals.$breakpoint-extra-large) {
-      width: 102%;
       height: 300px;
+    }
+    @media screen and (min-width: globals.$breakpoint-extra-extra-large) {
+      width: 101%;
     }
   }
 

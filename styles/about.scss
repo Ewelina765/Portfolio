@@ -35,6 +35,9 @@ $breakpoint-additional: 1400px;
     @media screen and (min-width: globals.$breakpoint-large) {
       height: 400px;
     }
+    @media screen and (min-width: globals.$breakpoint-extra-extra-large) {
+      width: 101%;
+    }
   }
 
   &__foto {

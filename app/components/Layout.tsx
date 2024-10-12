@@ -4,6 +4,12 @@ import { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
+import { CiInstagram } from 'react-icons/ci';
+import {
+  PiYoutubeLogoThin,
+  PiGithubLogoThin,
+  PiLinkedinLogoThin,
+} from 'react-icons/pi';
 
 import '../../styles/layout.scss';
 import useScrollSpy from '../hooks/useScrollSpy';
@@ -15,8 +21,8 @@ type LayoutProps = {
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   const path = usePathname();
   const sectionIds = ['home', 'skills', 'about', 'contact', 'blog'];
-  const activeSectionId = useScrollSpy(sectionIds, { threshold: 0.35 }); 
-  const [activeLink, setActiveLink] = useState<string>(''); 
+  const activeSectionId = useScrollSpy(sectionIds, { threshold: 0.35 });
+  const [activeLink, setActiveLink] = useState<string>('');
   const [navigationOpen, setNaviagtionOpen] = useState<boolean>(false);
   const [isMobile, setIsMobile] = useState<boolean>(false);
 
@@ -26,10 +32,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
   useEffect(() => {
     handleResize();
-    window.addEventListener('resize', handleResize); 
+    window.addEventListener('resize', handleResize);
 
     return () => {
-      window.removeEventListener('resize', handleResize); 
+      window.removeEventListener('resize', handleResize);
     };
   }, []);
 
@@ -43,19 +49,19 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
   const socialMediaLinks = [
     {
-      name: 'LI.',
+      icon: <PiLinkedinLogoThin size={25} />,
       path: 'https://www.linkedin.com/in/ewelinakonieczkowska/',
     },
     {
-      name: 'GH.',
+      icon: <PiGithubLogoThin size={25} />,
       path: 'https://github.com/Ewelina765',
     },
     {
-      name: 'YT.',
+      icon: <PiYoutubeLogoThin size={25} />,
       path: 'https://www.youtube.com/@DevJourney1',
     },
     {
-      name: 'IG.',
+      icon: <CiInstagram size={25} />,
       path: 'https://www.instagram.com/_devjourney_?igsh=bjh4ZzU5OXF1Njl6&utm_source=qr',
     },
   ];
@@ -78,9 +84,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         {(isMobile && navigationOpen) || !isMobile ? (
           <div className="layout__navigation">
             <div className="socialmedia">
-              {socialMediaLinks.map(({ name, path }) => (
+              {socialMediaLinks.map(({ icon, path }) => (
                 <Link key={path} href={path} className="link-class">
-                  {name}
+                  {icon}
                 </Link>
               ))}
             </div>

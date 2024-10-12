@@ -38,7 +38,8 @@ const PostPage = async ({ params }: { params: { postId: string } }) => {
   }
 
   const { title, date, image, contentHtml } = await getPostData(postId);
-  const pubDate = getFormattedDate(date);
+
+  const pubDate = date ? getFormattedDate(date) : 'No Date Available';
 
   return (
     <>

@@ -12,7 +12,8 @@ interface ListItemProps {
 
 const ListItem: React.FC<ListItemProps> = ({ post }) => {
   const { id, title, date, image, category } = post;
-  const formattedDate = getFormattedDate(date);
+
+  const formattedDate = date ? getFormattedDate(date) : 'No Date Available';
 
   return (
     <li>
