@@ -57,9 +57,8 @@ $h2-size: 34px;
   flex-direction: column;
   gap: 5px;
   flex-wrap: wrap;
-
+  align-items: center;
   @media screen and (min-width: 450px) {
-    align-items: center;
     gap: 0;
   }
   @media screen and (min-width: globals.$breakpoint-medium) {
