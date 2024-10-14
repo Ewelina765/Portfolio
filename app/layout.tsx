@@ -5,7 +5,7 @@ import './globals.css';
 import '../styles/globals.scss';
 
 export const metadata: Metadata = {
-  title: "Ewelina's Portfolio",
+  title: 'DevJourney',
   description: 'Ewelina Konieczkowska Portfolio',
   openGraph: {
     title: "Ewelina's Portfolio",
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/images/contact5.svg',
+        url: 'https://www.dev-journey.pl/images/contact5.svg',
         width: 800,
         height: 600,
         alt: 'Ewelina Konieczkowska Portfolio Image',
