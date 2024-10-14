@@ -7,6 +7,20 @@ import '../styles/globals.scss';
 export const metadata: Metadata = {
   title: "Ewelina's Portfolio",
   description: 'Ewelina Konieczkowska Portfolio',
+  openGraph: {
+    title: "Ewelina's Portfolio",
+    description: 'Ewelina Konieczkowska Portfolio',
+    url: 'https://www.dev-journey.pl/',
+    type: 'website',
+    images: [
+      {
+        url: '/images/contact5.svg',
+        width: 800,
+        height: 600,
+        alt: 'Ewelina Konieczkowska Portfolio Image',
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
