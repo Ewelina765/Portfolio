@@ -1,5 +1,5 @@
 ---
-title: 'In my free time'
+title: 'Talent Days Warsaw'
 category: 'LIFESTYLE'
 date: '10-29-2024'
 image: '/postsImages/talentDays.webp'

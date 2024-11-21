@@ -6,18 +6,20 @@ import '../styles/globals.scss';
 
 export const metadata: Metadata = {
   title: 'DevJourney',
-  description: 'Ewelina Konieczkowska Portfolio',
+  description: 'Ewelina Konieczkowska | Frontend Developer',
   openGraph: {
-    title: "Ewelina's Portfolio",
-    description: 'Ewelina Konieczkowska Portfolio',
+    title: "DevJourney",
+    description: 'Ewelina Konieczkowska | Frontend Developer',
     url: 'https://www.dev-journey.pl/',
     type: 'website',
     images: [
       {
-        url: 'https://www.dev-journey.pl/images/contact5.svg',
-        width: 800,
-        height: 600,
+        url: 'https://www.dev-journey.pl/images/logo_white.png',
+        width: 800,                // Zalecana szerokość
+        height: 600, 
+        type: 'image/png',
         alt: 'Ewelina Konieczkowska Portfolio Image',
+        secureUrl: 'https://www.dev-journey.pl/_next/image?url=%2Fimages%2Flogo_white.png&w=256&q=75',
       },
     ],
   },
